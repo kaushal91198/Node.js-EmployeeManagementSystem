@@ -1,0 +1,5 @@
+// adding node modules.
+npm i 
+
+//Windows PowerShell, use this command:
+env:DEBUG='myapp:*'; npm start
