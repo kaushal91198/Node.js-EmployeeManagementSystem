@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <style>body  
+      {  
+          margin: 0;  
+          padding: 0;  
+          background-color:#6abadeba;  
+          font-family: 'Arial';  
+      }  
+      .login{  
+              width: 308px;  
+              overflow: hidden;  
+              margin: auto;  
+              margin: 20 0 0 450px;  
+              padding: 80px;  
+              background: #23463f;  
+              border-radius: 15px ;  
+                
+      }  
+      h2{  
+          text-align: center;  
+          color: #277582;  
+          padding: 20px;  
+      }  
+      label{  
+          color: #08ffd1;  
+          font-size: 17px;  
+      }  
+      #Uname{  
+          width: 300px;  
+          height: 30px;  
+          border: none;  
+          border-radius: 3px;  
+          padding-left: 8px;  
+      }  
+      #Pass{  
+          width: 300px;  
+          height: 30px;  
+          border: none;  
+          border-radius: 3px;  
+          padding-left: 8px;  
+            
+      }  
+      #log{  
+          width: 300px;  
+          height: 30px;  
+          border: none;  
+          border-radius: 17px;  
+          padding-left: 7px;  
+          color: rgb(136, 255, 0);
+      }  
+      </style>
+    
+  <body>
+    <% if(msg !=''){ %>
+        <h2><%=msg %></h2><br>
+        <% }%>
+        <div class="login">    
+          <form id="login" action="/" method="post">    
+              <label><b>User Name     
+              </b>    
+              </label>    
+              <input type="text" id="Uname"placeholder="username" name="userName" required>    
+              <br><br>    
+              <label><b>Password     
+              </b>    
+              </label>    
+              <input type="password" id="Pass" placeholder="enter your password" name="password" required>    
+              <br><br>    
+              <input type="submit" name="log" id="log" value="Log In Here">       
+              <br><br>   
+              <p>New User?<a href="/signup">Click here to signup</a></p>    
+              <br>    
+            
+          </form>     
+      </div>    
+
+  </body>
+</html>
