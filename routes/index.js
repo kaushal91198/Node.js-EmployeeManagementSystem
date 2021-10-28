@@ -76,7 +76,7 @@ router.get("/delete/:id",(req,res)=>{
     let id = req.params.id
     empModel.findByIdAndDelete(id,(err,data)=>{
         if(err) throw err;  
-        fs.unlinkSync(`C:\\Users\\kaushal\\Desktop\\gitRepo\\ejsapp\\public\\uploads\\${data.image}`)
+        fs.unlinkSync(path.join(__dirname, `../public/uploads/${data.image}`))
         console.log("Successfully deleted")
         res.redirect('/users/view')
     })
@@ -148,7 +148,7 @@ router.post("/update/:id",upload,function(req,res) {
                 console.log("used if condition")
                 empModel.findByIdAndUpdate(id,updatedData,(err,data)=>{
                 if (err) throw err
-                fs.unlinkSync(`C:\\Users\\kaushal\\Desktop\\gitRepo\\ejsapp\\public\\uploads\\${data.image}`)
+                fs.unlinkSync(path.join(__dirname, `../public/uploads/${data.image}`))
             })
 
         }
