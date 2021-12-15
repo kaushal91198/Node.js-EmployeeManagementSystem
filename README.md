@@ -36,7 +36,7 @@ The different part or module of this project is as follows:
 -------------
 
 ## How to run this project in a local development machine
-* Make sure you install node modules in both frontend and backend using `npm install` command
+* Make sure you install node modules using `npm install` command
 
 * run projects on Windows PowerShell
 use this command `env:DEBUG='myapp:*'; npm start`
